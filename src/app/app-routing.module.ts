@@ -1,9 +1,10 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { SignuoComponent } from './signuo/signuo.component';
+import { SignupComponent } from './authentication/signup/signup.component';
+
 
 const routes: Routes = [
-  {path: 'signup', component: SignuoComponent}
+  {path: 'signup', component: SignupComponent}
 ];
 
 @NgModule({
