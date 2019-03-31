@@ -9,7 +9,6 @@ import { AuthenticationService } from 'src/app/authentication.service';
 })
 export class SignupComponent implements OnInit {
 
-  users: Signup[];
   user: any = {};
   errorMessage: string;
 
@@ -18,18 +17,7 @@ export class SignupComponent implements OnInit {
   ngOnInit() {
   }
 
-  createUser(studentNumber, password, firstName, lastName, address, city, phone, email, program) {
-    // const user = {
-    //   studentNumber: studentNumber,
-    //   password:password,
-    //   firstName: firstName,
-    //   lastName: lastName,
-    //   address: address,
-    //   city: city,
-    //   phone: phone,
-    //   email: email,
-    //   program: program
-    // };
+  createUser() {
     this.authService.signup(this.user).subscribe(
       data => {
         alert('New user added');
