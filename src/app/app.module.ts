@@ -12,6 +12,7 @@ import { CoursesViewComponent } from './courses/courses-view/courses-view.compon
 import { CoursesAddComponent } from './courses/courses-add/courses-add.component';
 import { CoursesEditComponent } from './courses/courses-edit/courses-edit.component';
 import { CoursesDeleteComponent } from './courses/courses-delete/courses-delete.component';
+import { SigninComponent } from './authentication/signin/signin.component';
 
 
 @NgModule({
@@ -22,6 +23,7 @@ import { CoursesDeleteComponent } from './courses/courses-delete/courses-delete.
     CoursesAddComponent,
     CoursesEditComponent,
     CoursesDeleteComponent,
+    SigninComponent,
   ],
   imports: [
     BrowserModule,
