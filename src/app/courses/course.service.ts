@@ -18,8 +18,12 @@ export class CourseService {
 
   constructor(private http: HttpClient) { }
 
-  getList(): Observable<any> {
-    return this.http.get<any>('http://localhost:3000/api/courses', this.httpOptions);
+  getList(user: any): Observable<any> {
+    const temp = {
+      student: user
+    };
+    const data = JSON.stringify(temp);
+    return this.http.post<any>('http://localhost:3000/api/courses', data, this.httpOptions);
   }
   getCourse(course: Course): Observable<any> {
     const data = JSON.stringify(course);

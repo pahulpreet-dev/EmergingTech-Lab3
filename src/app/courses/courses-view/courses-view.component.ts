@@ -14,24 +14,24 @@ export class CoursesViewComponent implements OnInit {
 
   courses: Course[];
   errorMessage: string;
+  user: any;
 
   constructor(private courseService: CourseService,
               private authenticationService: AuthenticationService,
               private router: Router) { }
 
   ngOnInit() {
-    console.log(localStorage.getItem('user'));
     if ( !this.authenticationService.isLoggedIn()) {
       alert('Please login first');
       this.router.navigate(['/signin']);
     } else {
     this.courses = new Array<Course>();
+    this.user = JSON.parse(localStorage.getItem('user'));
     this.displayCourseList(); }
   }
   displayCourseList(): void {
 
-    this.courseService.getList().subscribe(data => {
-        console.log(data);
+    this.courseService.getList(this.user).subscribe(data => {
         this.courses = data;
         // console.log(this.courses);
     });

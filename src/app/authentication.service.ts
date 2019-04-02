@@ -24,7 +24,7 @@ export class AuthenticationService {
     this.user = new Signup();
   }
 
-  signup(newUser): Observable<any> {
+  signup(newUser: any): Observable<any> {
     const body = JSON.stringify(newUser);
     console.log(body);
     return this.http.post<Signup>('http://localhost:3000/api/auth/signup', body, this.httpOptions);
