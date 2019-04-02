@@ -1,29 +1,6 @@
-Hi I am learning the MEAN full-stack development
+# Hi I am learning the MEAN full-stack development in this repo
 
-# AngularClientLab3
-
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.7.
-
-## Development server
-
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
-
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+# Exercise
+Create an Express Rest API which exposes CRUD functionalities for a student/course system. Create a student model which describes student information (student number, password, first name, last name, address, city, phone number, email, program) and also a course model which describes course information (course code, course name, section, semester). The information should be stored in a MongoDB database. Use ref to allow a student document to make a reference to corresponding course document. Provide authentication capabilities using Passport – local strategy. 
+Create an Angular MVC front end that allows students to login, add a course, update a course (for example change the section), drop a course, list all the courses taken by a student, list all students, list all courses, and list all students that are taking a given course.
+Apply MVC principles. Design nice and friendly web pages.
