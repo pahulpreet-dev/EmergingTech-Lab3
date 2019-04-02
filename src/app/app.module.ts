@@ -17,6 +17,7 @@ import { LogoutComponent } from './authentication/logout/logout.component';
 import { HomeComponent } from './home/home.component';
 import { ListStudentsComponent } from './lists/list-students/list-students.component';
 import { ListCoursesComponent } from './lists/list-courses/list-courses.component';
+import { ListCourseStudentsComponent } from './lists/list-course-students/list-course-students.component';
 
 
 @NgModule({
@@ -32,6 +33,7 @@ import { ListCoursesComponent } from './lists/list-courses/list-courses.componen
     HomeComponent,
     ListStudentsComponent,
     ListCoursesComponent,
+    ListCourseStudentsComponent,
   ],
   imports: [
     BrowserModule,

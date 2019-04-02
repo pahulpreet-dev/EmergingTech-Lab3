@@ -1,11 +1,22 @@
 /*Reference https://codepen.io/ehermanson/full/KwKWEv */
 
+:host {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    height: 100vh;
+    width: 100vw
+}
+
 html {
     overflow-y: scroll;
 }
 
 body {
     background: #c1bdba;
+    height: 100vh;
     font-family: 'Titillium Web', sans-serif;
 }
 
@@ -22,7 +33,7 @@ a:hover {
 .form {
     background: rgba(19, 35, 47, .9);
     padding: 40px;
-    max-width: 600px;
+    max-width: 800px;
     margin: 40px auto;
     border-radius: 4px;
     box-shadow: 0 4px 10px 4px rgba(19, 35, 47, .3);
@@ -52,6 +63,7 @@ th {
 td {
     text-align: center;
     color: #fff;
+    /* border: 1px solid #dddddd; */
 }
 
 input,

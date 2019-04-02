@@ -1,3 +1,5 @@
+import { Signup } from './signup';
+
 export class Course {
 
   _id: string;
@@ -5,4 +7,5 @@ export class Course {
   courseName: string;
   section: string;
   semester: string;
+  student: Signup;
 }

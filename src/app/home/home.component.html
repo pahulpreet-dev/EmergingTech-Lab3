@@ -1,7 +1,10 @@
 <div class="form">
-    <a *ngIf="loggedIn" [routerLink]="['/courses']">View Courses</a><br /><br />
-    <a *ngIf="loggedIn" [routerLink]="['/courses/add']">Add Courses</a><br /><br />
-    <a *ngIf="loggedIn" [routerLink]="['/logout']">Logout</a><br /><br />
-    <a *ngIf="!loggedIn" [routerLink]="['/signin']">Login</a><br /><br />
-    <a *ngIf="!loggedIn" [routerLink]="['/signup']">Sign Up</a><br /><br />
+    <h1>Welcome to COMP 308-Lab 3</h1>
+    <a *ngIf="loggedIn" [routerLink]="['/courses']">View Courses<br /><br /></a>
+    <a *ngIf="loggedIn" [routerLink]="['/courses/add']">Add Courses<br /><br /></a>
+    <a *ngIf="loggedIn" [routerLink]="['/logout']">Logout<br /><br /></a>
+    <a [routerLink]="['/list-students']">List of all students</a><br /><br />
+    <a [routerLink]="['/list-courses']">List of all courses</a><br /><br />
+    <a *ngIf="!loggedIn" [routerLink]="['/signin']">Login<br /><br /></a>
+    <a *ngIf="!loggedIn" [routerLink]="['/signup']">Sign Up<br /><br /></a>
 </div>

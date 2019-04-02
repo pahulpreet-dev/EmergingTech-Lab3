@@ -1,3 +1,17 @@
-<p>
-  list-courses works!
-</p>
+<div class="form">
+    <h2>List of all Courses</h2>
+    <table width=50%>
+        <th>Course Code</th>
+        <th>Course Name</th>
+        <th></th>
+        <tr *ngFor="let course of courses">
+            <td>{{ course.courseCode }}</td>
+            <td>{{ course.courseName }}</td>
+            <td><a [routerLink]="[]" routerLinkActive="a" (click)="viewStudents(course)">
+                View Students
+              </a>
+            </td>
+        </tr>
+    </table><br><br>
+    <a [routerLink]="['/home']">Go Home</a>
+</div>

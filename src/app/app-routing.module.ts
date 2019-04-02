@@ -8,6 +8,9 @@ import { CoursesDeleteComponent } from './courses/courses-delete/courses-delete.
 import { SigninComponent } from './authentication/signin/signin.component';
 import { LogoutComponent } from './authentication/logout/logout.component';
 import { HomeComponent } from './home/home.component';
+import { ListCoursesComponent } from './lists/list-courses/list-courses.component';
+import { ListStudentsComponent } from './lists/list-students/list-students.component';
+import { ListCourseStudentsComponent } from './lists/list-course-students/list-course-students.component';
 
 const routes: Routes = [
   {path: 'signup', component: SignupComponent},
@@ -18,7 +21,11 @@ const routes: Routes = [
   {path: 'courses', component: CoursesViewComponent},
   {path: 'courses/add', component: CoursesAddComponent},
   {path: 'courses/edit/:id', component: CoursesEditComponent},
-  {path: 'courses/delete/:id', component: CoursesDeleteComponent}
+  {path: 'courses/students/:id', component: CoursesEditComponent},
+  {path: 'courses/delete/:id', component: CoursesDeleteComponent},
+  {path: 'list-courses', component: ListCoursesComponent},
+  {path: 'list-students', component: ListStudentsComponent},
+  {path: 'course-students', component: ListCourseStudentsComponent}
 ];
 
 @NgModule({
