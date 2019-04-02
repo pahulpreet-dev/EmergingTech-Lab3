@@ -6,7 +6,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 @Component({
   selector: 'app-courses-edit',
   templateUrl: './courses-edit.component.html',
-  styleUrls: ['./courses-edit.component.css']
+  styleUrls: ['../../styles/styles.css']
 })
 export class CoursesEditComponent implements OnInit {
 

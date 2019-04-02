@@ -1,34 +1,36 @@
-<h1>Edit</h1>
-<form (ngSubmit)="editCourse()" novalidate>
-    <div>
-        <label for="courseCode">Course Code</label>
+<div class="form">
+    <h1>Edit</h1>
+    <form (ngSubmit)="editCourse()" novalidate>
         <div>
-            <input type="text" required [(ngModel)]="course.courseCode" name="courseCode" placeholder="Course Code" value="{{course.courseCode}}">
+            <label for="courseCode">Course Code</label>
+            <div>
+                <input type="text" required [(ngModel)]="course.courseCode" name="courseCode" placeholder="Course Code" value="{{course.courseCode}}">
+            </div>
         </div>
-    </div>
-    <div>
-        <label for="courseName">Course Name</label>
         <div>
-            <input type="courseName" required [(ngModel)]="course.courseName" name="courseName" placeholder="Course Name" value="{{course.courseName}}">
+            <label for="courseName">Course Name</label>
+            <div>
+                <input type="courseName" required [(ngModel)]="course.courseName" name="courseName" placeholder="Course Name" value="{{course.courseName}}">
 
+            </div>
         </div>
-    </div>
-    <div>
-        <label for="section">Section</label>
         <div>
-            <input type="section" required [(ngModel)]="course.section" name="section" placeholder="Section" value="{{course.section}}">
+            <label for="section">Section</label>
+            <div>
+                <input type="section" required [(ngModel)]="course.section" name="section" placeholder="Section" value="{{course.section}}">
 
+            </div>
         </div>
-    </div>
-    <div>
-        <label for="semester">Semester</label>
         <div>
-            <input type="semester" required [(ngModel)]="course.semester" name="semester" placeholder="Semester" value="{{course.semester}}">
+            <label for="semester">Semester</label>
+            <div>
+                <input type="semester" required [(ngModel)]="course.semester" name="semester" placeholder="Semester" value="{{course.semester}}">
 
+            </div>
         </div>
-    </div>
-    <div>
-        <input type="submit">
-    </div>
-    <strong id="error">{{errorMessage}}</strong>
-</form>
+        <div>
+            <input class="button button-block" type="submit" value="Edit">
+        </div>
+        <strong id="error">{{errorMessage}}</strong>
+    </form>
+</div>
