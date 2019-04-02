@@ -39,11 +39,9 @@ public storeUserData(user: Signup): void {
   this.user = user;
 }
 
-public logout(): Observable<any> {
+public logout(): void {
   this.user = null;
   localStorage.clear();
-
-  return this.http.get<any>('http://localhost:3000/api/auth/logout', this.httpOptions);
 }
 
 isLoggedIn(): boolean {

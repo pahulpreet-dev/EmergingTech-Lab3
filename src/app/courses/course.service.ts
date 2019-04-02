@@ -27,12 +27,18 @@ export class CourseService {
   }
 
   editCourse(course: Course): Observable<any> {
-    //const data = JSON.stringify(course);
     return this.http.post<any>('http://localhost:3000/api/courses/edit/' + course._id, course, this.httpOptions);
   }
 
-  addCourse(course: Course): Observable<any> {
-    const data = JSON.stringify(course);
+  addCourse(course: Course, user: any): Observable<any> {
+    const temp = {
+      courseCode: course.courseCode,
+      courseName: course.courseName,
+      section: course.section,
+      semester: course.semester,
+      student: user
+    };
+    const data = JSON.stringify(temp);
     return this.http.post<Course>('http://localhost:3000/api/courses/add', data, this.httpOptions);
   }
 

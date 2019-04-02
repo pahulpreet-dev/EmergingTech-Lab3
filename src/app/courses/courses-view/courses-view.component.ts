@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { Course } from 'src/app/models/course';
 import { CourseService } from '../course.service';
 import { Router } from '@angular/router';
+import { AuthenticationService } from 'src/app/authentication.service';
+import { routerNgProbeToken } from '@angular/router/src/router_module';
 
 @Component({
   selector: 'app-courses-view',
@@ -14,12 +16,17 @@ export class CoursesViewComponent implements OnInit {
   errorMessage: string;
 
   constructor(private courseService: CourseService,
+              private authenticationService: AuthenticationService,
               private router: Router) { }
 
   ngOnInit() {
+    console.log(localStorage.getItem('user'));
+    if ( !this.authenticationService.isLoggedIn()) {
+      alert('Please login first');
+      this.router.navigate(['/signin']);
+    } else {
     this.courses = new Array<Course>();
-
-    this.displayCourseList();
+    this.displayCourseList(); }
   }
   displayCourseList(): void {
 
