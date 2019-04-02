@@ -14,6 +14,7 @@ import { CoursesEditComponent } from './courses/courses-edit/courses-edit.compon
 import { CoursesDeleteComponent } from './courses/courses-delete/courses-delete.component';
 import { SigninComponent } from './authentication/signin/signin.component';
 import { LogoutComponent } from './authentication/logout/logout.component';
+import { HomeComponent } from './home/home.component';
 
 
 @NgModule({
@@ -26,6 +27,7 @@ import { LogoutComponent } from './authentication/logout/logout.component';
     CoursesDeleteComponent,
     SigninComponent,
     LogoutComponent,
+    HomeComponent,
   ],
   imports: [
     BrowserModule,

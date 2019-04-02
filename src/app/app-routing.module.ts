@@ -7,9 +7,12 @@ import { CoursesEditComponent } from './courses/courses-edit/courses-edit.compon
 import { CoursesDeleteComponent } from './courses/courses-delete/courses-delete.component';
 import { SigninComponent } from './authentication/signin/signin.component';
 import { LogoutComponent } from './authentication/logout/logout.component';
+import { HomeComponent } from './home/home.component';
 
 const routes: Routes = [
   {path: 'signup', component: SignupComponent},
+  {path: 'home', component: HomeComponent},
+  {path: '', redirectTo: '/home', pathMatch: 'full'},
   {path: 'signin', component: SigninComponent},
   {path: 'logout', component: LogoutComponent},
   {path: 'courses', component: CoursesViewComponent},

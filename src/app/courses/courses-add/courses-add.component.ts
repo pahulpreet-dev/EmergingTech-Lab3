@@ -7,7 +7,7 @@ import { Signup } from 'src/app/models/signup';
 @Component({
   selector: 'app-courses-add',
   templateUrl: './courses-add.component.html',
-  styleUrls: ['./courses-add.component.css']
+  styleUrls: ['../../styles/styles.css']
 })
 export class CoursesAddComponent implements OnInit {
 
@@ -32,7 +32,7 @@ export class CoursesAddComponent implements OnInit {
     this.courseService.addCourse(this.course, this.user).subscribe(
       data => {
         alert('New course added');
-        return true;
+        this.router.navigate(['/courses']);
       },
       error => {
         console.error('Error creating course');

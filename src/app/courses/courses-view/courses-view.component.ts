@@ -8,7 +8,7 @@ import { routerNgProbeToken } from '@angular/router/src/router_module';
 @Component({
   selector: 'app-courses-view',
   templateUrl: './courses-view.component.html',
-  styleUrls: ['./courses-view.component.css']
+  styleUrls: ['../../styles/styles.css']
 })
 export class CoursesViewComponent implements OnInit {
 

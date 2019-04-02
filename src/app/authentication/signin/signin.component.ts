@@ -6,7 +6,7 @@ import { Signup } from 'src/app/models/signup';
 @Component({
   selector: 'app-signin',
   templateUrl: './signin.component.html',
-  styleUrls: ['./signin.component.css']
+  styleUrls: ['../../styles/styles.css']
 })
 export class SigninComponent implements OnInit {
 
@@ -20,18 +20,9 @@ export class SigninComponent implements OnInit {
   }
 
   signin(): void {
-    // this.authenticationService.signin(this.credentials).subscribe(res =>
-    //     { alert('login'),
-    //       console.log(res.user);
-    //   },
-    //     error => {
-    //       this.errorMessage = error,
-    //       console.log(error);
-    //     });
     this.authenticationService.signin(this.user).subscribe(data => {
           this.authenticationService.storeUserData(data);
-          console.log(data);
-          alert('login');
+          this.router.navigate(['/home']);
          }, error => console.log('error'));
   }
 

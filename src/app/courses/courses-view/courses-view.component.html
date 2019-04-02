@@ -1,27 +1,32 @@
-<h2>List of Courses</h2>
-<table>
-    <th>Course Code</th>
-    <th>Course Name</th>
-    <th>Section</th>
-    <th>Semester</th>
-    <tr *ngFor="let course of courses">
-        <td>
-            {{course.courseCode}}
-        </td>
-        <td>
-            {{course.courseName}}
-        </td>
-        <td>
-            {{course.section}}
-        </td>
-        <td>
-            {{course.semester}}
-        </td>
-        <td>
-            <a [routerLink]="['/courses', 'edit', course._id]">Edit</a>
-        </td>
-        <td class="text-center">
-            <a [routerLink]="['/courses', 'delete', course._id]" (click)="onDeleteClick()">Delete</a>
-        </td>
-    </tr>
-</table>
+<div class='form'>
+    <h2>List of Courses</h2>
+    <table width=100%>
+        <th>Course Code</th>
+        <th>Course Name</th>
+        <th>Section</th>
+        <th>Semester</th>
+        <th></th>
+        <th></th>
+        <tr *ngFor="let course of courses">
+            <td>
+                {{course.courseCode}}
+            </td>
+            <td>
+                {{course.courseName}}
+            </td>
+            <td>
+                {{course.section}}
+            </td>
+            <td>
+                {{course.semester}}
+            </td>
+            <td>
+                <a [routerLink]="['/courses', 'edit', course._id]">Edit</a>
+            </td>
+            <td class="text-center">
+                <a [routerLink]="['/courses', 'delete', course._id]" (click)="onDeleteClick()">Delete</a>
+            </td>
+        </tr>
+    </table>
+    <a [routerLink]="['/home']">Go Home</a>
+</div>
